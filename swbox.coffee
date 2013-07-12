@@ -37,7 +37,7 @@ mountBox = ->
         else if "#{err}".indexOf('remote host has disconnected') > -1
           warn 'Error: The box server did not respond.'
           warn "The box ‘#{boxName}’ might not exist, or your SSH key might not be associated with it."
-          warn 'Make sure you can see the box in your Data Hub on http://x.scraperwiki.com'
+          warn 'Make sure you can see the box in your Data Hub on https://scraperwiki.com'
           exec "rmdir #{path}", (err) ->
             if err? then warn "Additionally, we enountered an error while removing the temporary directory at #{path}"
         else
